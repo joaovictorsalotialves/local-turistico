@@ -1,0 +1,149 @@
+:root {
+  --color-background: #F5F4F0;
+
+  --color-headline: #E1624F;
+
+  --color-blue: #0C51A7;
+  --color-orange: #E95E10;
+  --color-pink: #E5245E;
+  --color-purple: #591B98;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  font-family: 'Open Sans', sans-serif;
+}
+
+body {
+  font-size: 16px;
+  line-height: 1.5;
+
+  background-color: var(--color-background);
+}
+
+main {
+  margin: 40px;
+  padding: 20px;
+}
+
+h1 {
+  font-size: 36px;
+}
+
+h2 {
+  font-size: 32px;
+}
+
+h3 {
+  font-size: 28px;
+}
+
+h4 {
+  color: var(--color-headline);
+  font-size: 16px;
+  text-transform: uppercase;
+}
+
+figure img {
+  border-radius: 28px;
+}
+
+/* Introdução */
+#introduction header h4 {
+  margin-bottom: 8px;
+}
+
+#introduction figure {
+  margin: 40px 0 40px;
+}
+
+#introduction figure img {
+  margin-bottom: 24px;
+}
+
+#introduction figure figcaption {
+  font-style: italic;
+  text-align: center;
+}
+
+/* Destinos imperdíveis */
+#must-see-destinations header h4 {
+  margin: 64px 0 2px;
+}
+
+#must-see-destinations>p {
+  margin: 8px 0 64px;
+}
+
+#destinations-container {
+  list-style: none;
+  counter-reset: contador;
+  margin-bottom: 40px;
+}
+
+#destinations-container>li {
+  counter-increment: contador;
+}
+
+#destinations-container>li+li {
+  margin-top: 48px;
+}
+
+#destinations-container h3::before {
+  content: counter(contador) ". ";
+  font-weight: bold;
+}
+
+#destinations-container h3 {
+  margin-bottom: 4px;
+}
+
+#destinations-container>li figure {
+  margin-bottom: 20px;
+}
+
+#destinations-container>li p {
+  margin-bottom: 16px;
+}
+
+#destinations-container ul li {
+  margin-left: 24px;
+  font-weight: bold;
+}
+
+#destinations-container ul li .blue {
+  color: var(--color-blue);
+}
+
+#destinations-container ul li .purple {
+  color: var(--color-purple);
+}
+
+#destinations-container ul li .pink {
+  color: var(--color-pink);
+}
+
+#destinations-container ul li .orange {
+  color: var(--color-orange);
+}
+
+/* Encerramento */
+#conclusion {
+  margin-top: 40px;
+}
+
+/* Rodapé */
+footer {
+  margin: 40px 0 20px;
+  padding: 20px;
+  text-align: center;
+}
+
+@media (max-width: 600px) {
+  main {
+    margin: 20px 10px;
+  }
+}
